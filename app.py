@@ -40,7 +40,7 @@ prompt = ChatPromptTemplate.from_template(template)
 
 # --- 3. INITIALIZE THE LLM ---
 model = ChatGoogleGenerativeAI(
-    model="gemini-2.5-flash",  # <-- Using the latest Flash model
+    model="gemini-1.5-flash",  # <-- Using the latest Flash model
     temperature=0.7, 
     convert_system_message_to_human=True
 )
@@ -68,4 +68,5 @@ if __name__ == "__main__":
         
         # Invoke the chain with the user's question
         response = rag_chain.invoke(user_question)
+
         print("\nAssistant:", response)
